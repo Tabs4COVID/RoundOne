@@ -53,6 +53,18 @@ adb shell am start -a android.settings.SECURITY_SETTINGS
 #  com.whatsapp.apk
 #  us.zoom.videomeetings.apk
 
+
+#An important note:
+#Apparently, google play and services do not work correctly if they're not installed in the correct order. 
+#You can either manually type adb install ______.apk, or just rename the files.
+#In my case, renaming them doesn't really matter. But new coders: Please don't take on this habit.
+
+# 1com.google.android.gsf.login.apk
+# 2com.google.android.gsf.apk
+# 3com.google.android.gms.apk
+# 4com.android.vending.apk
+
+
 #The for loop lists all apps in the current directory, and installs them one by one.
 echo "Installing apps in current directory.."
 echo
